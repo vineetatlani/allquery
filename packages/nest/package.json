@@ -1,0 +1,15 @@
+{
+  "name": "@allquery/nest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/nest.js",
+  "typings": "./dist/nest.d.ts",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && babel src --out-dir lib --extensions '.ts,.tsx'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
