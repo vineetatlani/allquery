@@ -1,7 +1,7 @@
 // ExpressAdapter.ts
 import express from 'express';
 import { BaseQueryConfig } from "@allquery/core";
-import queryString from "query-string";
+import qs from "qs";
 
 export class ExpressAdapter<T extends BaseQueryConfig<T>> {
   private app: express.Application;
@@ -18,10 +18,11 @@ export class ExpressAdapter<T extends BaseQueryConfig<T>> {
   private setupRoutes(): void {
     this.app.get(this.apiPath, async (req: any, res: any) => {
       try {
-        const queryConfig = queryString.parse(req.query) as T;
+        const queryConfig = qs.parse(req.query);
         const results = await this.databaseAdapter.query(queryConfig);
         res.json(results);
       } catch (error) {
+        console.error(error)
         res.status(400).json({ error: error });
       }
     });

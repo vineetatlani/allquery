@@ -6,13 +6,14 @@
   "typings": "./dist/express.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && babel src --out-dir lib --extensions '.ts,.tsx'"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.3",
+    "qs": "^6.12.0",
     "query-string": "^9.0.0"
   },
   "devDependencies": {

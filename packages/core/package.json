@@ -6,7 +6,7 @@
   "typings": "./dist/core.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:core": "tsc && babel src --out-dir lib --extensions '.ts,.tsx'"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
